@@ -1,0 +1,134 @@
+INTERVIEW SELECTION FRAMEWORK
+AlgoEconomics Student Developer Recruitment
+December 2025
+OVERVIEW
+This framework provides a systematic approach to evaluating and selecting 3-4 exceptional student developers from potentially 50+ applications. The goal is to identify candidates who combine technical excellence, intrinsic motivation, and collaborative mindset.
+Key Principle: Prioritize quality over quantity. It is better to have 2 exceptional developers than 4 mediocre ones. Do not compromise on standards just to fill positions.
+Timeline: Applications close December 16. Interviews December 17-19. Final decisions December 20.
+PHASE 1: APPLICATION SCREENING
+Objective: Rapidly filter applications to identify top 15-20 candidates for technical assessment.
+Time Investment: 5-10 minutes per application
+Screening Checklist (Must Pass All):
+Criterion	What to Look For
+Complete Application	All four components submitted: introduction, GitHub/code samples, availability commitment, technical question. Reject incomplete applications immediately.
+Evidence of Reading	Technical question demonstrates they actually read the specification. Generic questions like "What tech stack will we use?" (it's in the doc) = auto-reject.
+Relevant Technical Skills	GitHub shows backend/API work OR data engineering projects. Frontend-only developers or no backend evidence = polite rejection.
+Realistic Availability	Commits to 15-20 hours/week minimum. Candidates offering <10 hours = reject (insufficient for meaningful contribution).
+Clear Motivation	Introduction shows genuine interest in economic intelligence, African markets, or fintech. Generic "looks like good experience" = weak signal.
+Red Flags (Immediate Rejection):
+•	Copy-paste generic introduction clearly sent to 20 other startups
+•	No code samples or GitHub is empty/only coursework
+•	Misspells "AlgoEconomics" or gets basic facts wrong
+•	Demands equity upfront or negotiates compensation before interview
+•	Application submitted after deadline (shows inability to follow instructions)
+Green Flags (Strong Candidates):
+•	GitHub shows substantial projects with clean, documented code
+•	Technical question shows deep engagement ("How are you planning to handle rate limiting across multiple API sources?" = excellent)
+•	Specific interest in UK-Africa markets or economic development
+•	Experience with data pipelines, APIs, or financial systems
+•	Final year or Master's student (more serious, better availability)
+ 
+PHASE 2: TECHNICAL ASSESSMENT
+Objective: Evaluate technical depth and problem-solving ability. Narrow to top 8-10 candidates for interviews.
+Method: Send 3 technical questions via email. Candidates have 48 hours to respond. Answers should be 2-3 paragraphs per question (not code).
+Technical Assessment Questions:
+Question 1: API Integration & Rate Limiting
+"AlgoEconomics needs to collect data from World Bank and IMF APIs daily. The World Bank API has a rate limit of 120 requests per minute, but we need to fetch 50+ indicators for 6 countries. How would you design a system to stay within rate limits while ensuring data freshness? Consider retry logic, error handling, and what happens if an API is temporarily unavailable."
+What You're Testing: Understanding of async processing, queue systems, error handling, practical system design.
+Good Answer Signals: Mentions task queues (Celery/Bull), exponential backoff, caching, monitoring/alerting, graceful degradation.
+Question 2: Database Design for Time-Series
+"We're storing economic indicators (GDP, inflation, unemployment) for 6 countries over time. Users will query things like 'Show me Kenya's GDP for the last 12 months' or 'Compare inflation rates across all countries in Q3 2025.' What database schema would you design? What indexes would you create? Would you use any special database features or extensions?"
+What You're Testing: Database fundamentals, time-series optimization, performance awareness.
+Good Answer Signals: Mentions TimescaleDB or time-series patterns, composite indexes on (country, indicator, date), considers data granularity and storage efficiency.
+Question 3: Algorithm Design for Corruption Index
+"The AI Corruption Index scores governance risk from 0-100 (0=highest risk, 100=lowest risk). You have access to: procurement transparency data, regulatory quality scores, and institutional strength metrics. How would you combine these into a single score? Walk through your approach - doesn't need to be perfect, just explain your thinking."
+What You're Testing: Problem decomposition, algorithmic thinking, ability to work with ambiguity.
+Good Answer Signals: Suggests weighted averaging, normalization of different scales, considers data quality/missing values, thinks about how to validate results.
+Scoring the Technical Assessment:
+Score	Description
+9-10	Exceptional. Deep technical understanding, mentions advanced concepts, considers edge cases. Must interview.
+7-8	Strong. Solid fundamentals, practical solutions, shows good judgment. Strong interview candidate.
+5-6	Adequate. Understands basics but lacks depth. Consider if shortage of stronger candidates.
+1-4	Insufficient. Weak fundamentals or vague answers. Polite rejection.
+ 
+PHASE 3: INTERVIEWS
+Objective: Assess cultural fit, communication skills, and intrinsic motivation. Make final hiring decision.
+Format: 30-minute video call per candidate
+Who Should Interview: Kwazi Ndlela (CEO) conducts all first-round interviews. If you have strong candidates who could be Backend Lead, consider a second interview with James Mulligan for team dynamics assessment.
+Interview Structure (30 Minutes):
+Time	Section
+0-5 min	Warmup & Context. Brief intro to AlgoEconomics, show Google screenshot, explain the opportunity. Make them comfortable.
+5-15 min	Technical Deep Dive. Walk through 1-2 projects on their GitHub. Ask them to explain architecture decisions, challenges faced, what they'd do differently.
+15-25 min	Behavioral & Motivation Questions. See question list below. Assess cultural fit and intrinsic motivation.
+25-30 min	Candidate Questions & Close. Answer their questions. Explain next steps and timeline for decision.
+Key Interview Questions:
+1. Technical Experience
+"Walk me through the most complex technical project you've built. What was hard about it? What would you do differently now?"
+What to Listen For: Do they take ownership of decisions? Can they articulate trade-offs? Do they learn from mistakes?
+2. Motivation & Fit
+"Why AlgoEconomics specifically? You could volunteer for lots of projects - what made you apply here?"
+Red Flag: Generic answer ("looks like good experience"). Green Flag: Specific interest in economic intelligence, African markets, or fintech.
+3. Collaboration Style
+"Tell me about a time you disagreed with a teammate on a technical decision. How did you handle it?"
+What to Listen For: Can they disagree constructively? Do they default to ego or pragmatism?
+4. Handling Ambiguity
+"The AI Corruption Index doesn't exist yet - we're defining it as we build. How do you feel about working on something where the requirements aren't perfectly clear upfront?"
+Red Flag: Needs very detailed specs before starting. Green Flag: Comfortable iterating, asks good clarifying questions.
+5. Time Management
+"You mentioned you can commit 15-20 hours per week. Walk me through a typical week - when would you actually be working on this?"
+What to Listen For: Realistic plan or wishful thinking? Have they actually thought about their schedule?
+6. Post-Funding Interest
+"If we successfully raise funding in March, would you be interested in joining full-time? What would make that decision easy or hard for you?"
+What to Listen For: Gauge long-term interest. Not a deal-breaker if they're uncertain, but helps with planning.
+ 
+PHASE 4: FINAL DECISION
+Objective: Select 3-4 developers who will form a high-performing team. Team composition matters as much as individual talent.
+Scoring Rubric (Score Each Candidate 1-10):
+Dimension	What to Assess
+Technical Ability	Depth of knowledge in backend systems, databases, APIs. Quality of code samples. Performance on technical assessment.
+Communication	Clarity in explaining technical concepts. Written communication quality in application. Active listening in interview.
+Intrinsic Motivation	Genuine interest in the mission vs resume-building. Energy level when discussing the project. Thoughtful questions about the platform.
+Reliability & Ownership	Track record of finishing projects. Realistic about time commitment. Takes ownership vs blaming circumstances.
+Cultural Fit	Collaborative mindset. Comfortable with ambiguity. Growth mindset (learns from mistakes). Aligns with AlgoEconomics values.
+Team Composition Strategy:
+Don't just pick the 4 highest-scoring individuals. Consider team dynamics:
+•	One Backend Lead: Strongest technical candidate who can make architecture decisions
+•	One Data Engineer: Focus on pipeline, APIs, database optimization
+•	One ML/Algorithm Developer: Corruption Index scoring logic
+•	Optional 4th: Flex role based on strongest remaining candidate - could be DevOps, additional backend, or someone who can wear multiple hats
+Critical: Better to hire 3 exceptional developers than 4 where the 4th is weak. Quality > quantity.
+Making the Final Call:
+Calculate total score (sum of 5 dimensions × 10 = max 50 points):
+•	45-50 points: Exceptional candidate. Make offer immediately.
+•	40-44 points: Strong candidate. Likely offer depending on team composition.
+•	35-39 points: Adequate. Only hire if shortage of better candidates.
+•	Below 35: Do not hire. Polite rejection.
+ 
+MAKING OFFERS
+Offer Call Script:
+"Hi [Name], thanks again for interviewing. I'm excited to let you know we'd like to offer you a position on the AlgoEconomics development team as [Backend Lead/Data Engineer/ML Developer].
+We were impressed by [specific thing from their interview]. You'll be working alongside [mention other team members if already decided] to build the backend infrastructure for our MVP.
+Next steps: I'll email you the Volunteer Developer Agreement today. Please review it - you're welcome to have a lawyer look at it - and we'll need it signed before our January 6 kickoff.
+Do you have any questions about the project, timeline, or the agreement?"
+Give them 24 hours to review and sign. If they decline, move to next candidate on your list.
+Rejection Email Template:
+Subject: AlgoEconomics Developer Position - Update
+Dear [Name],
+Thank you for your interest in AlgoEconomics and for taking the time to go through our interview process. We were impressed by your skills and enthusiasm.
+After careful consideration, we've decided to move forward with other candidates whose experience more closely aligns with our immediate technical needs. This was a difficult decision given the strength of the applicant pool.
+We'd be happy to stay in touch and potentially revisit opportunities as AlgoEconomics grows. I'll keep your details on file for future positions.
+Best of luck with your studies and future endeavors.
+Best regards,
+Kwazi Ndlela
+ 
+FINAL CHECKLIST
+Before Finalizing Your Team:
+1.	Do you have at least one candidate with strong backend architecture experience who can serve as technical lead?
+2.	Are there any glaring skill gaps in the team composition (e.g., no one with database experience)?
+3.	Do all selected candidates have realistic, committed availability (15-20 hours/week)?
+4.	Are there any concerns about team dynamics or personality conflicts?
+5.	Have you verified that all candidates can legally work on the project (no conflicting agreements with universities or employers)?
+6.	Have all selected candidates been enthusiastic and responsive throughout the process?
+If you answer 'no' to any of these, seriously reconsider your selections.
+Remember: You're not just hiring developers. You're building the founding technical team that will shape AlgoEconomics' culture and capability. Be selective. Be thoughtful. Be decisive.
+Good luck building your team.
