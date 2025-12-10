@@ -1,0 +1,91 @@
+VOLUNTEER DEVELOPER AGREEMENT
+AlgoEconomics Ltd.
+This Volunteer Developer Agreement (the "Agreement") is entered into as of _________________ (the "Effective Date") by and between:
+AlgoEconomics Ltd., a company registered in England and Wales ("Company" or "AlgoEconomics"), and
+_________________________________ ("Developer")
+(each a "Party" and collectively the "Parties")
+RECITALS
+WHEREAS, the Company is developing an AI-powered economic intelligence platform focused on UK-Africa markets;
+WHEREAS, the Developer possesses technical skills and expertise in software development;
+WHEREAS, the Developer wishes to volunteer their time and services to contribute to the development of the Company's platform; and
+WHEREAS, the Company wishes to accept the Developer's volunteer services on the terms and conditions set forth herein.
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, the Parties agree as follows:
+1. NATURE OF RELATIONSHIP
+1.1 The Developer agrees to provide volunteer software development services to the Company on a voluntary, unpaid basis.
+1.2 This Agreement does not create an employment relationship between the Developer and the Company. The Developer is not entitled to any employment benefits, including but not limited to health insurance, paid leave, pension contributions, or any other employee benefits.
+1.3 The Developer acknowledges that they are providing services as a volunteer and will not receive monetary compensation for their work unless otherwise agreed in writing by the Company.
+1.4 The Developer is free to pursue other employment, educational, or volunteer opportunities during the term of this Agreement.
+2. SCOPE OF WORK
+2.1 The Developer agrees to contribute to the development of AlgoEconomics' backend infrastructure and AI-powered economic intelligence platform, including but not limited to:
+a)	Backend API development and database architecture
+b)	Data pipeline engineering and integration with third-party APIs
+c)	AI algorithm implementation for governance risk scoring
+d)	Testing, documentation, and deployment support
+2.2 The Developer's expected time commitment is approximately 15-20 hours per week during the period of January 6, 2026 to February 6, 2026, subject to the Developer's availability and academic commitments.
+2.3 The Developer will participate in weekly synchronization meetings and asynchronous communication via the Company's designated collaboration tools.
+2.4 The Company reserves the right to modify the scope of work at any time with reasonable notice to the Developer.
+ 
+3. INTELLECTUAL PROPERTY ASSIGNMENT
+3.1 Work Product. The Developer hereby assigns to the Company all right, title, and interest in and to any and all inventions, discoveries, developments, improvements, works of authorship, designs, algorithms, software code, documentation, and other intellectual property (collectively, "Work Product") created, conceived, developed, or reduced to practice by the Developer, either alone or jointly with others, during the term of this Agreement and relating to the Company's business, products, services, or research and development.
+3.2 Scope of Assignment. This assignment includes, without limitation, all copyrights, patents, trade secrets, trademarks, and any other proprietary rights in and to the Work Product, whether or not patentable or copyrightable.
+3.3 Future Rights. To the extent any Work Product does not qualify as a "work made for hire" under applicable law, the Developer hereby irrevocably assigns and transfers to the Company all right, title, and interest in and to such Work Product, including all intellectual property rights therein.
+3.4 Further Assurances. The Developer agrees to execute any and all documents and perform any and all acts that may be necessary or desirable to perfect the Company's ownership of the Work Product, including execution of patent, copyright, or trademark assignments and applications.
+3.5 Moral Rights. To the extent permitted by law, the Developer hereby irrevocably waives any moral rights or similar rights in the Work Product.
+3.6 Pre-Existing Materials. If the Developer incorporates into the Work Product any materials created prior to this Agreement ("Pre-Existing Materials"), the Developer hereby grants to the Company a perpetual, irrevocable, worldwide, royalty-free license to use, reproduce, modify, distribute, and create derivative works from such Pre-Existing Materials solely in connection with the Work Product.
+3.7 Third-Party Materials. The Developer shall not incorporate any third-party materials into the Work Product without the prior written consent of the Company, unless such materials are available under an open-source license approved by the Company.
+4. CONFIDENTIALITY
+4.1 Confidential Information. The Developer acknowledges that during the course of their volunteer work, they may have access to confidential and proprietary information of the Company, including but not limited to technical data, business plans, financial information, customer lists, marketing strategies, source code, algorithms, and product roadmaps (collectively, "Confidential Information").
+4.2 Non-Disclosure Obligation. The Developer agrees to hold all Confidential Information in strict confidence and not to disclose such information to any third party without the prior written consent of the Company.
+4.3 Permitted Use. The Developer shall use Confidential Information solely for the purpose of performing their volunteer services under this Agreement.
+4.4 Exceptions. The obligations under this Section 4 shall not apply to information that: (a) is or becomes publicly available through no breach of this Agreement by the Developer; (b) was rightfully in the Developer's possession prior to disclosure by the Company; (c) is independently developed by the Developer without use of or reference to the Confidential Information; or (d) is required to be disclosed by law or court order, provided the Developer gives the Company prompt written notice of such requirement.
+4.5 Survival. The obligations under this Section 4 shall survive the termination of this Agreement for a period of five (5) years.
+ 
+5. FUTURE COMPENSATION AND EQUITY CONSIDERATION
+5.1 Potential Future Consideration. The Company acknowledges the Developer's valuable contributions and may, in its sole discretion, offer the Developer equity compensation, employment opportunities, or other forms of consideration following the Company's Series Seed funding round anticipated in March 2026.
+5.2 No Legal Obligation. The Developer acknowledges and agrees that this Agreement creates no legal obligation on the part of the Company to provide any equity, employment, or other compensation. Any such arrangements, if made, shall be subject to separate written agreements.
+5.3 Priority Consideration. The Company agrees to give the Developer priority consideration for full-time employment positions and equity grants, if any are offered following successful funding, based on the quality and impact of the Developer's contributions.
+5.4 Performance-Based. Any future compensation or equity consideration, if provided, will be based on the Developer's performance, contribution quality, Company needs, and available resources at the time of the funding event.
+6. REPRESENTATIONS AND WARRANTIES
+The Developer represents and warrants that:
+6.1 The Developer has the full right, power, and authority to enter into this Agreement and to perform their obligations hereunder.
+6.2 The execution and performance of this Agreement will not violate any agreement or obligation between the Developer and any third party.
+6.3 All Work Product created by the Developer will be original or properly licensed, and will not infringe upon or violate any intellectual property rights, proprietary rights, or other rights of any third party.
+6.4 The Developer will comply with all applicable laws and regulations in the performance of their volunteer services.
+6.5 The Developer is not bound by any confidentiality or non-compete agreement that would prevent them from performing their obligations under this Agreement.
+7. TERMINATION
+7.1 Termination by Either Party. Either Party may terminate this Agreement at any time, for any reason or no reason, by providing seven (7) days' written notice to the other Party.
+7.2 Immediate Termination. The Company may terminate this Agreement immediately without notice if the Developer: (a) breaches any material term of this Agreement; (b) engages in conduct that is detrimental to the Company's business or reputation; or (c) fails to comply with applicable laws or regulations.
+7.3 Effect of Termination. Upon termination of this Agreement:
+e)	All rights to Work Product shall remain with the Company;
+f)	The Developer shall immediately return or destroy all Confidential Information and Company property in their possession;
+g)	The Developer's obligations under Sections 3 (Intellectual Property), 4 (Confidentiality), and 9 (General Provisions) shall survive termination.
+7.4 No Liability. Neither Party shall have any liability to the other Party for termination of this Agreement in accordance with its terms.
+ 
+8. LIMITATION OF LIABILITY
+8.1 To the maximum extent permitted by applicable law, in no event shall either Party be liable to the other Party for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to this Agreement, regardless of the theory of liability.
+8.2 The Developer acknowledges that they are volunteering at their own risk and the Company shall not be liable for any injury or damage to the Developer arising from their volunteer activities, except to the extent caused by the Company's gross negligence or willful misconduct.
+9. GENERAL PROVISIONS
+9.1 Entire Agreement. This Agreement constitutes the entire agreement between the Parties with respect to the subject matter hereof and supersedes all prior and contemporaneous agreements, understandings, and communications, whether written or oral.
+9.2 Amendments. This Agreement may only be amended or modified by a written document signed by both Parties.
+9.3 Governing Law. This Agreement shall be governed by and construed in accordance with the laws of England and Wales, without regard to its conflict of laws principles.
+9.4 Jurisdiction. The Parties agree to submit to the exclusive jurisdiction of the courts of England and Wales for the resolution of any disputes arising out of or relating to this Agreement.
+9.5 Severability. If any provision of this Agreement is held to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect.
+9.6 Waiver. No waiver of any provision of this Agreement shall be deemed or shall constitute a waiver of any other provision, nor shall any waiver constitute a continuing waiver.
+9.7 Assignment. The Developer may not assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of the Company. The Company may assign this Agreement without the Developer's consent.
+9.8 Notices. All notices under this Agreement shall be in writing and shall be deemed given when delivered personally, sent by email with confirmation of receipt, or sent by registered or certified mail, return receipt requested.
+9.9 Counterparts. This Agreement may be executed in counterparts, each of which shall be deemed an original and all of which together shall constitute one and the same instrument.
+9.10 Independent Legal Advice. The Developer acknowledges that they have been advised to seek independent legal advice before signing this Agreement and has had the opportunity to do so.
+ 
+IN WITNESS WHEREOF, the Parties have executed this Volunteer Developer Agreement as of the Effective Date.
+FOR ALGOECONOMICS LTD.:
+Signature: _________________________________________
+Name: Kwazi Ndlela
+Title: Founder & CEO
+Date: _____________________________________________
+DEVELOPER:
+Signature: _________________________________________
+Name: _____________________________________________
+Address: __________________________________________
+        __________________________________________
+Email: ____________________________________________
+Date: _____________________________________________
