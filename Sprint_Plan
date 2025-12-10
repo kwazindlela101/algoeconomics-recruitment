@@ -1,0 +1,260 @@
+30-DAY MVP SPRINT PLAN
+AlgoEconomics Backend Development
+January 6 - February 6, 2026
+SPRINT OVERVIEW
+Mission: Deliver a functional MVP of AlgoEconomics' backend infrastructure and AI Corruption Index by February 6, 2026, positioning the company for Series Seed fundraising in March 2026.
+Team Size: 3-4 volunteer student developers + CEO (Kwazi Ndlela) + Co-founder (James Mulligan)
+Time Commitment: 15-20 hours per week per developer (60-80 total team hours/week)
+Development Philosophy: Ship working features incrementally. Focus on core value proposition (real-time economic data + corruption scoring). Perfect is the enemy of shipped.
+Success Criteria:
+•	Functional backend API serving economic indicators and corruption scores
+•	Live database with data for 2 countries, 5 sectors, 12 months history
+•	Automated data pipeline collecting from World Bank and IMF daily
+•	AI Corruption Index generating scores across priority sectors
+•	Deployed to production and integrated with frontend for beta customer demos
+ 
+SPRINT STRUCTURE
+Daily Rhythm:
+•	Morning Async Standup (Slack): Post by 10am: Yesterday's progress, today's plan, blockers
+•	Focus Work Blocks: Minimum 2 uninterrupted hours per day
+•	End-of-Day Updates: Commit code with clear messages, update task status
+Weekly Rhythm:
+•	Monday 6pm: Team Sync (60 min) - Review last week, plan this week, technical discussions, unblock issues
+•	Wednesday: Mid-week Check-in (async) - Progress pulse, identify risks early
+•	Friday: Demo/Review - Show working features, celebrate wins, identify next week's priorities
+Communication Tools:
+•	Slack: Daily standups, quick questions, team updates
+•	GitHub: Code repository, pull requests, technical discussions
+•	Linear/GitHub Projects: Task tracking, sprint planning, backlog management
+•	Notion: Technical documentation, architectural decisions, meeting notes
+•	Zoom: Weekly sync calls, pair programming sessions
+ 
+WEEK 1: FOUNDATION (January 6-12)
+Theme: Establish infrastructure and technical foundations. Set up development environment, architecture, and core systems.
+Goal: Team can write code against a working backend skeleton and database by end of week.
+Kickoff (Monday, January 6):
+•	Team introduction call (90 min): Roles, responsibilities, working norms
+•	Product deep-dive: Show Google screenshot, explain AI Corruption Index, walk through user stories
+•	Technical architecture review: Whiteboard session on system design
+•	Assign Week 1 tasks and workstream ownership
+Week 1 Deliverables:
+1.	Development Environment Setup
+•	GitHub repository with branch protection rules
+•	Docker containerization for local development
+•	CI/CD pipeline (GitHub Actions) for automated testing
+•	Code style/linting setup (ESLint/Prettier or Black/pylint)
+2.	Database Design & Setup
+•	PostgreSQL instance deployed (Railway/Render)
+•	Database schema designed: countries, indicators, sectors, corruption_scores tables
+•	TimescaleDB extension enabled for time-series optimization
+•	Migration system configured (Alembic/Knex)
+•	Seed data for 2 countries (Kenya, Nigeria) loaded
+3.	Backend API Skeleton
+•	FastAPI/Express framework initialized
+•	Health check endpoint (/health) working
+•	Database connection pooling configured
+•	Basic error handling and logging setup
+•	Environment variable management (.env files)
+4.	Authentication & Security
+•	API key authentication system
+•	Rate limiting middleware (per-key quotas)
+•	CORS configuration for frontend integration
+5.	Monitoring & Observability
+•	Structured logging (JSON format)
+•	Basic metrics tracking (request counts, response times)
+•	Error tracking setup (Sentry or equivalent)
+Week 1 Success Metrics:
+•	All developers can run application locally in Docker
+•	Database is accessible and contains seed data
+•	API health check returns 200 OK
+•	CI/CD pipeline runs on every pull request
+ 
+WEEK 2: DATA INTEGRATION (January 13-19)
+Theme: Connect to external data sources and build automated collection pipeline.
+Goal: Automated daily data collection working for World Bank and IMF APIs, storing in database.
+Week 2 Deliverables:
+1.	World Bank API Integration
+•	API client module with retry logic and rate limit handling
+•	Fetch GDP, inflation, unemployment, trade balance, FDI for Kenya and Nigeria
+•	Data transformation pipeline (raw API → standardized format)
+•	Backfill last 12 months of historical data
+2.	IMF Data Portal Integration
+•	API client for IMF data service
+•	Fetch government debt, reserves, balance of payments
+•	Reconcile IMF and World Bank data schemas
+3.	Task Scheduling System
+•	Celery (Python) or Bull (Node.js) configured
+•	Daily scheduled job to fetch new data (runs at 2am UTC)
+•	Task queue monitoring dashboard
+•	Email alerts on task failures
+4.	Data Quality & Validation
+•	Data validation rules (null checks, range checks, consistency checks)
+•	Duplicate detection and prevention
+•	Data quality metrics dashboard
+•	Automated tests for data transformation logic
+5.	Caching Layer
+•	Redis instance deployed and connected
+•	Cache frequently accessed indicators (GDP, inflation) with 1-hour TTL
+•	Cache invalidation strategy on new data arrival
+Week 2 Success Metrics:
+•	Database contains 12 months of historical data for Kenya and Nigeria
+•	Scheduled jobs run successfully without manual intervention
+•	Data quality validation passes on 95%+ of collected data
+•	Cache hit rate >70% for common queries
+ 
+WEEK 3: AI CORRUPTION INDEX (January 20-26)
+Theme: Build the proprietary algorithm that differentiates AlgoEconomics - the AI Corruption Index.
+Goal: Working corruption risk scores (0-100 scale) for 5 priority sectors across 2 countries.
+Week 3 Deliverables:
+1.	Scoring Algorithm Design
+•	Define input features for each sector (procurement data, regulatory quality, institutional strength)
+•	Design weighted composite scoring model
+•	Normalization strategy for different data scales (0-100 output range)
+•	Handle missing data gracefully (partial scores, confidence intervals)
+2.	Sector-Specific Risk Models
+•	Mining: Focus on licensing transparency, revenue disclosure, environmental compliance
+•	Agriculture: Subsidy program transparency, land rights, export regulations
+•	Fintech: Regulatory framework clarity, data protection, licensing process
+•	Energy: Power purchase agreements transparency, grid reliability, renewable policy
+•	Healthcare: Pharmaceutical procurement, infrastructure investment, policy consistency
+3.	Score Calculation Engine
+•	Core calculation module (input: indicators → output: score 0-100)
+•	Batch processing for historical scores (compute all months retroactively)
+•	Real-time calculation on new data arrival
+•	Score versioning (track algorithm changes over time)
+4.	Validation & Calibration
+•	Compare scores against known governance events (e.g., Kenya 2023 finance bill protests = spike in political risk)
+•	Benchmark against Transparency International CPI to ensure directional alignment
+•	Sensitivity analysis (how much do scores change with input variations?)
+•	Unit tests for scoring logic
+5.	API Endpoints for Corruption Scores
+•	GET /scores/{country}/{sector} - Latest score
+•	GET /scores/{country}/{sector}/history - Time-series data
+•	GET /scores/compare - Cross-country or cross-sector comparisons
+•	Response includes: score, confidence level, contributing factors, trend direction
+Week 3 Success Metrics:
+•	Scores generated for all 5 sectors in Kenya and Nigeria
+•	12 months of historical scores calculated
+•	API endpoints return valid JSON with <200ms response time
+•	Scores validated against at least 3 known governance events
+ 
+WEEK 4: API COMPLETION & TESTING (January 27 - February 2)
+Theme: Complete API surface, comprehensive testing, performance optimization.
+Goal: Production-ready API that frontend can integrate against, with full test coverage.
+Week 4 Deliverables:
+1.	Complete API Endpoints
+•	GET /countries - List available countries
+•	GET /countries/{country}/indicators - All indicators for a country
+•	GET /sectors - List available sectors
+•	GET /indicators - Metadata about all indicators
+•	GET /health - Detailed health check (database, cache, external APIs)
+2.	Comprehensive Testing
+•	Unit tests for all business logic (target: 80% coverage)
+•	Integration tests for database operations
+•	API endpoint tests (all routes, happy path + error cases)
+•	Load testing (can handle 100 concurrent requests?)
+•	Edge case testing (missing data, API failures, rate limits)
+3.	Performance Optimization
+•	Database query optimization (add indexes where needed)
+•	Implement pagination for large datasets
+•	Optimize cache strategy (identify hot paths)
+•	Response time <200ms for cached queries, <500ms for uncached
+4.	API Documentation
+•	OpenAPI/Swagger specification generated
+•	Interactive API docs hosted at /docs endpoint
+•	Example requests/responses for each endpoint
+•	Authentication guide for frontend developers
+5.	Error Handling & Resilience
+•	Standardized error response format
+•	Graceful degradation when external APIs fail
+•	Circuit breaker pattern for flaky dependencies
+•	Comprehensive logging of errors with context
+Week 4 Success Metrics:
+•	All API endpoints documented and tested
+•	Test coverage >80% on critical paths
+•	Load test passes: 100 concurrent users with <500ms p95 latency
+•	API documentation published and accessible
+ 
+WEEK 5: DEPLOYMENT & HANDOFF (February 3-6)
+Theme: Deploy to production, integrate with frontend, document everything for long-term maintainability.
+Goal: Live production API serving frontend dashboard. Complete handoff documentation. Ready for beta customer demos.
+Week 5 Deliverables:
+1.	Production Deployment
+•	Deploy to Railway/Render with production configuration
+•	Set up production database with automated backups
+•	Configure production Redis instance
+•	SSL/TLS certificates configured
+•	Custom domain configured (api.algoeconomics.org)
+2.	Frontend Integration Support
+•	Provide frontend team with API credentials
+•	Support integration testing with frontend dashboard
+•	Fix any integration issues that arise
+•	End-to-end testing: frontend → API → database → frontend
+3.	Monitoring & Alerting
+•	Production monitoring dashboard (uptime, latency, error rate)
+•	Alert rules configured (downtime, high error rate, slow queries)
+•	Email/Slack alerts on critical issues
+•	Log aggregation and search capability
+4.	Technical Handoff Documentation
+•	Architecture diagram (system components, data flow)
+•	Database schema documentation with entity relationships
+•	API reference guide (all endpoints, parameters, responses)
+•	Deployment runbook (how to deploy updates)
+•	Troubleshooting guide (common issues and solutions)
+•	Future enhancement recommendations
+5.	Final Testing & Validation
+•	Smoke test all critical paths in production
+•	Verify scheduled jobs running correctly
+•	Confirm monitoring and alerts working
+•	Performance validation (load test in production)
+Week 5 Success Metrics:
+•	Production API is live and accessible
+•	Frontend dashboard successfully displays live data
+•	99%+ uptime during final week
+•	Complete documentation delivered
+•	Beta customer demo prepared and rehearsed
+ 
+RISK MANAGEMENT
+Aggressive timelines require proactive risk management. Here are common risks and mitigation strategies:
+Risk	Impact	Mitigation
+Developer drops out mid-sprint	Critical features undelivered, timeline at risk	Pair programming from Week 1. Cross-train on workstreams. Keep 1-2 strong backup candidates warm.
+External API unreliable	Data collection fails, corruption scores can't be calculated	Implement retry logic and fallbacks. Cache aggressively. Have manual data entry process as backup.
+Scope creep	Team gets distracted by nice-to-have features, MVP deadline missed	Ruthless prioritization. 'Post-funding' backlog for non-critical features. CEO reviews weekly progress.
+Technical debt accumulation	Code becomes unmaintainable, slows future development post-funding	Mandatory code reviews. Automated linting. Document as you go. Allocate 20% time to refactoring.
+Academic exam period	Developers unavailable for 1-2 weeks, timeline slips	Front-load critical work. Build in 1-week buffer. Adjust expectations if unavoidable conflicts arise.
+ 
+DEFINITION OF DONE
+A feature is only considered 'done' when ALL of the following criteria are met:
+1.	Code Complete: Feature implemented according to specification
+2.	Tested: Unit tests written, integration tests pass, manual testing complete
+3.	Code Reviewed: At least one other developer has reviewed and approved
+4.	Documented: API docs updated, inline comments added, README updated if needed
+5.	Merged: Pull request merged to main branch
+6.	Deployed: Changes deployed to staging environment and smoke tested
+7.	Demoed: Feature demonstrated to CEO in Friday review
+No shortcuts. If it's not done according to these criteria, it's not done.
+ 
+CELEBRATION & RECOGNITION
+This is a marathon disguised as a sprint. Celebrating progress keeps morale high and momentum strong.
+Weekly Wins:
+•	Every Friday call starts with celebrating the week's achievements
+•	Public recognition in Slack for major milestones
+•	Screenshot and share progress (e.g., "First API call returned data!")
+Milestone Celebrations:
+•	End of Week 2: First automated data collection working
+•	End of Week 3: First corruption score calculated
+•	End of Week 5: MVP shipped to production. Team dinner (on AlgoEconomics)
+Post-Sprint Recognition:
+After the February 6 completion:
+•	Personalized thank you letters from CEO
+•	LinkedIn recommendations highlighting specific contributions
+•	First consideration for equity and full-time roles post-funding
+•	Recognition on AlgoEconomics website as founding technical team
+ 
+FINAL THOUGHTS
+This 30-day sprint is not just about building an MVP. It's about proving that AlgoEconomics can execute. It's about demonstrating to Series Seed investors that the Google search result wasn't aspirational - it was prophetic.
+You're not just volunteer developers. You're the founding technical team of a company that's creating a new category: AI-powered governance risk infrastructure for UK-Africa capital allocation.
+The timeline is aggressive. The expectations are high. The reward - if we execute - is being part of something that changes how billions of dollars flow into African markets.
+Let's build.
+January 6 - February 6, 2026
+30 days to change everything.
