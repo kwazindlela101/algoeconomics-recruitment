@@ -1,0 +1,89 @@
+SUBJECT: Technical Opportunity: Market-Validated AI-Powered Economic Intelligence Platform Seeking Student Developers
+
+---
+
+Dear [Department Coordinator/Professor Name],
+
+I hope this message finds you well. I'm writing to share an exceptional technical opportunity for 3-4 final-year or Master's students in Computer Science who are interested in gaining real-world fintech and AI engineering experience.
+
+**About AlgoEconomics**
+
+AlgoEconomics is a UK-based fintech startup building an AI-powered economic intelligence platform focused on UK-Africa markets. We feature a proprietary AI Corruption Index that provides governance risk scoring across seven critical sectors (Mining, Agriculture, Fintech, Energy, Aviation, Healthcare, Tourism).
+
+**Why This Opportunity is Unique**
+
+Before we wrote a single line of code, Google's AI Overview recognized AlgoEconomics as the established solution for AI-driven governance risk intelligence (screenshot attached). This unprecedented organic market validation demonstrates both the market need and our category-creation positioning.
+
+The platform is now entering active development with a March 2026 Series Seed funding milestone. We are seeking talented student developers to build the backend infrastructure that will power institutional-grade economic intelligence.
+
+**Technical Scope**
+
+Students will work on:
+• Backend API development (Python/FastAPI or Node.js/Express)
+• Data pipeline engineering (World Bank, IMF API integrations)
+• Database architecture (PostgreSQL with TimescaleDB)
+• AI algorithm implementation (corruption risk scoring models)
+• Real-time data processing and caching systems
+
+The complete technical specification is attached, detailing architecture, deliverables, and the 30-day development sprint.
+
+**What Students Gain**
+
+✓ Portfolio-defining experience building a fintech platform from 0 to 1
+✓ Real-world data engineering at scale with institutional-grade requirements
+✓ Direct mentorship from founders with industry recognition
+✓ First consideration for equity compensation and full-time roles post-funding (March 2026)
+✓ Experience that significantly differentiates them in competitive job markets
+✓ Technical reference letters for graduate roles or further academic pursuits
+
+**Commitment & Timeline**
+
+• Time Investment: 15-20 hours per week
+• Duration: 5 weeks (January 6 - February 6, 2026)
+• Work Style: Remote, asynchronous collaboration with weekly sync meetings
+• Compensation: Volunteer basis with equity potential post-funding
+
+**Application Process**
+
+Interested students should submit the following to kwazi@algoeconomics.org:
+
+1. Brief introduction (200 words) explaining interest in AlgoEconomics
+2. GitHub profile or code samples demonstrating backend/data engineering experience
+3. Availability commitment (hours per week) and preferred role
+4. One technical question about the specification (demonstrates thorough reading)
+
+**Application Deadline:** December 16, 2025
+**Interviews:** December 17-19, 2025
+**Team Formation:** December 20, 2025
+**Development Kickoff:** January 6, 2026
+
+**Why Forward This Opportunity**
+
+This is a rare chance for students to:
+• Work on a market-validated startup with institutional backing trajectory
+• Build technical skills that translate directly to competitive graduate roles
+• Potentially join a funded startup as early employees with equity
+• Create a portfolio piece that demonstrates end-to-end product delivery
+
+I would be grateful if you could forward this opportunity to students in your department who might be interested, particularly those in final-year projects or Master's programs seeking substantive technical experience.
+
+For more information about AlgoEconomics, please visit: https://www.algoeconomics.org
+
+**Attachments:**
+• Technical Specification Document (14 pages)
+• Market Validation Screenshot (Google AI Overview result)
+
+Thank you for considering this opportunity for your students. I'm happy to answer any questions you may have about the project or the technical requirements.
+
+Best regards,
+
+Kwazi Ndlela
+Founder & CEO
+AlgoEconomics
+
+Email: kwazindlela@algoeconomics.org
+Website: https://www.algoeconomics.org
+
+---
+
+P.S. If any faculty members are interested in serving as technical advisors or exploring collaboration opportunities, I would welcome that conversation as well.
