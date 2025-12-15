@@ -101,7 +101,7 @@ We welcome collaboration with university research groups focused on:
 ## 🔗 Links
 
 - **Website:** [algoeconomics.org](https://www.algoeconomics.org)
-- **Contact:** kwazi.ndlela@algoeconomics.org
+- **Contact:** kwazi.ndlela@algoeconomics.org or james.mulligan@algoeconomics.org
 - **Documentation:** Technical specifications available upon request
 
 ## 📜 License
