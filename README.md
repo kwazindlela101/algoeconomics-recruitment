@@ -17,6 +17,8 @@ AlgoEconomics provides institutional investors with data-driven, real-time econo
 ### The AI Corruption Index
 A proprietary governance risk scoring system that provides institutional investors and businesses with real-time, AI-driven analysis of governance performance risks in African markets. Unlike traditional ratings that rely on lagging surveys, our index uses artificial intelligence to proactively identify and mitigate risks.
 
+Our MVP uses free, high-quality governance data from global institutions including the World Bank, IMF, AfDB, UN ECFA, and national statistics offices. These sources are validated, auditable, and aligned with our scoring methodology.
+
 **Core Components:**
 - **Procurement Transparency Scores** - Analysis of public tender integrity
 - **Regulatory Risk Mapping** - Identification of jurisdictional vulnerabilities  
